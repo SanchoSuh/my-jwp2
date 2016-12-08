@@ -37,7 +37,9 @@ $(".answer-write input[type='submit']").click( function(e) {
     });
 });
 
-$("#comment-delete button[type='submit']").click( function(e) {
+$(".qna-comment-slipp-articles").on("click", "#comment-delete button[type='submit']", deleteAnswer());
+
+function deleteAnswer(e) {
 	console.log("comment delete");
 	e.preventDefault();
 	
@@ -62,4 +64,4 @@ $("#comment-delete button[type='submit']").click( function(e) {
 			console.log("comment delete error", error);
 		}
 	});
-});
+};
